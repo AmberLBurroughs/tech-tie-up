@@ -1,0 +1,33 @@
+{{!-- tile --}}
+<section id="category-header" class="clearfix">
+<div class="category-head-wrap">
+<div class="container">
+  <h1>{{category}}</h1>
+</div>
+</div>
+</section>
+{{!-- create a new post --}}
+<section id="category-user-choices">
+  {{!-- {{> posts/category-new-post-block }} --}}
+  <div class="user-choices-wrap container">
+  	{{#if isLoggedIn}}
+			<button class="choice-bttn" data-toggle="tooltip" title="Create A Post!">+</button>
+		{{else}}
+			<button data-toggle="modal" data-target="#accountModal" data-toggle="tooltip" title="Create A Post!">+</button>
+  	{{/if}}
+	</div>
+	<div class="new-post-wrap hide">
+		{{> posts/category-new-post-block }}
+	</div>
+</section>
+{{!-- Post feed --}}
+<section id="feed-wrap">
+	<div class="container">
+	 	<div id="post-feed">
+		  {{#each post}}
+		    {{> posts/category-post-block}}
+		  {{/each}}
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="/assets/js/postFeed.js"></script>

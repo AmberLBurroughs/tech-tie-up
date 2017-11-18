@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<title>TECH-link</title>
+		{{!-- <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"> --}}
+		<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Cormorant+Garamond:500|Cousine|Indie+Flower|Italiana|Oswald:300|Permanent+Marker|Poiret+One|Rozha+One|Unica+One|Wire+One" rel="stylesheet">
+		{{!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> --}}
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="/assets/css/particles.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		{{!--  <script src="/assets/js/main.js"></script> --}}
+	</head>
+	<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3"></div>
+				<div class="col-md-6 col-sm-6" id="logo-wrap">
+					<h2><a href="/">TECH TIE-UP</a></h2>
+				</div>
+				<div class="col-md-3 col-sm-3" id="login-wrap">
+				{{!-- 	<!-- if user if logged in href points to /account/id  else log in modal appears --> --}}
+				 {{> account/login-icon-block}}
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="base">
+		{{{ body }}}
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<!-- nav quick links -->
+				</div>
+				<div class="col-md-4">
+					<!-- nav quick links -->
+				</div>
+				<div class="col-md-4">
+					<!-- nav quick links -->
+				</div>
+			</div>
+		</div>
+	</footer>
+	{{> account/modal-block}}
+	<script type="text/javascript" src="/assets/js/main.js"></script>
+	</body>
+</html>

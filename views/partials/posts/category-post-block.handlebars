@@ -1,0 +1,30 @@
+<div class="panel-group" data-postID="{{id}}" data-ownerId="{{#with User}}{{id}}{{/with}}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="panel-title">
+      <div class="row">
+        <div class="col-md-2">
+          {{#with User}}
+            <div class="post-user-image">
+              <img src="{{image}}">
+            </div>
+            <h4><strong>{{username}}</strong></h4>
+          {{/with}}
+        </div>
+        <div class="col-md-10">
+          <h4>{{title}}
+            <a data-toggle="collapse" href="#collapse{{id}}" class="post-toggle">+</a>
+          </h4>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="collapse{{id}}" class="panel-collapse collapse">
+      <div class="panel-body">{{body}}</div>
+    </div>
+    <div class="panel-footer">
+      <em>{{createdAtStr}}<em>
+      <span class="hide post-extras"><a class="upvote-counter" value={{likes}}> {{likes}}&nbsp;⇪</a> | <a class="save-post">save post</a> | <a href="/post/{{id}}">view thread</a></span>
+    </div>
+  </div>
+</div>

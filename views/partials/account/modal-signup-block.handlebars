@@ -1,0 +1,25 @@
+{{!-- show any messages that come back with authentication  --}}
+          
+{{!-- {{#if message.length > 0}}
+  <div class="alert alert-danger">{{message}}</div>
+{{/if}}
+ --}}
+
+<!-- Signup FORM -->
+<form id="signup-form" action="/signup" method="POST">
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control user-email" name="email" required="email">
+  </div>
+  <div class="form-group">
+    <label>username</label>
+    <input type="text" class="form-control user-username" name="username" required="username">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control user-password" name="password" required="password" id="user-password">
+    <label>Confirm Password&nbsp;&nbsp;<span id='password-message'></span></label>
+    <input type="password" class="form-control user-password" name="confirmpassword" required="password" value="" required="confirm password" id="confirm-password">
+  </div>
+  <button type="submit" class="btn btn-default btn-lg disabled" id="signup-submit" disabled="disabled">Signup</button>
+</form>

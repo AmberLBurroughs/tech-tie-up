@@ -1,0 +1,42 @@
+<section id="thread-post">
+<div class="container">
+{{#with post}}
+<div class="panel-group" data-postID="{{id}}" data-ownerId="{{#with User}}{{#with dataValues}}{{id}}{{/with}}{{/with}}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="panel-title">
+      <div class="row">
+        <div class="col-md-2">
+            <div class="post-user-image">
+              <img src="{{#with User}}
+								{{#with dataValues}}
+									{{image}}
+								{{/with}}{{/with}}">
+            </div>
+            <h4><strong>{{#with User}}
+						{{#with dataValues}}
+							{{username}}
+						{{/with}}{{/with}}</strong></h4>
+        </div>
+        <div class="col-md-10">
+          <h4>{{title}}
+          </h4>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="collapse{{id}}" class="">
+      <div class="panel-body">{{body}}</div>
+    </div>
+    <div class="panel-footer">
+      <em>{{createdAtStr}}<em>
+      <span class=" post-extras"><a class="upvote-counter" value={{likes}}> {{likes}}&nbsp;⇪</a>&nbsp;|&nbsp;<a class="save-post">save post</a>&nbsp;|&nbsp; <a>reply</a></span>
+    </div>
+  </div>
+</div>
+</div>
+{{/with}}
+
+
+
+</section>

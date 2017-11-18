@@ -1,0 +1,12 @@
+{{#if isLoggedIn}}
+<a href="/account">
+	<span class="glyphicon glyphicon-user logged-in-user" aria-hidden="true" data-thisId="{{currentUser}}"></span>
+</a>
+{{else}}
+<a data-toggle="modal" data-target="#accountModal">
+	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+	{{!-- 	{{isLoggedIn}} --}}
+</a>
+{{/if}}
+
+{{!-- / get id of current user from cookie --}}

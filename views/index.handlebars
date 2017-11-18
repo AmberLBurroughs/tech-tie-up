@@ -1,0 +1,35 @@
+<section>
+<div class="row hero-wrap">
+	<div class="col-md-6 col-sm-12 left" id="particles-js"></div>
+	<div class="col-md-6 col-sm-12 right">
+		<div class="circle clearfix">
+			<div>
+				<h1>&lt;&nbsp;HELLO WORLD&nbsp;&gt;</h1>
+				<p>TECH Tie-Up is a community for developers and tech enthusiast to learn, share​ ​their ​knowledge.</p>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+{{!-- display all categories --}}
+<section id="categories" class="clearfix">
+<div class="container">
+	<div class="categories-header">
+		<h2>CATEGORIES</h2>
+	</div>
+	<div class="categories-content clearfix">
+		<div class="categories-container clearfix">
+			{{#each categories}}
+			<div id="cat-{{this.id}}" class="category-wrap">
+				<div class="category-content">
+					<h2><a href="/category/{{this.route}}/{{this.id}}">{{this.title}}</a></h2>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</div>
+</section>
+{{!-- scripts --}}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+<script type="text/javascript" src="/assets/js/particles.js"></script>

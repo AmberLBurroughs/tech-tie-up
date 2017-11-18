@@ -1,0 +1,42 @@
+
+<div id="profile-info">
+	{{#if isLoggedIn}}
+	{{#with user}}
+	<div class="post-user-image">
+		<img src="{{image}}">
+	</div>
+		<p>{{username}}</p>
+		<p>{{email}}</p>
+		<p>{{fullname}}</p>
+		<p>{{location}}</p>
+	{{/with}}
+	{{/if}}
+	<button class="btn btn-default" id="updateProfile">update</button>
+<div/>
+
+
+<div id="profile-info-update" class="hide">
+	<form id="update-profile">
+		<div class="form-group" >
+	    <label for="new-title">profile image</label>
+	    <input type="file" class="" id="" data-defualt-name="{{image}}" name="user_profile_pic">
+		</div>
+		{{#with user}}
+		<div class="form-group">
+	    <label for="new-title">Full Name</label>
+	    <input type="text" class="form-control" id="profile-name" data-defualt-name="{{fullname}}" required="name">
+		</div>
+		<div class="form-group">
+	    <label for="new-title">username</label>
+	    <input type="text" class="form-control" id="profile-username" data-defualt-username="{{username}}">
+		</div>
+		<div class="form-group">
+	    <label for="new-title">location</label>
+	    <input type="text" class="form-control" id="profile-location" data-defualt-location="{{location}}" required="location">
+		</div>
+		{{/with}}
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form> 
+</div>
+</div>
+<script type="text/javascript" src="/assets/js/account.js"></script>

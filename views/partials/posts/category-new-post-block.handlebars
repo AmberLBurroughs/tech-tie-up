@@ -1,0 +1,18 @@
+<form id="create-post">
+  <p class="cancel-form">X</p>
+	<div class="form-group">
+    <label for="new-title">post title</label>
+    <input type="text" class="form-control" id="new-title" required="title">
+	</div>
+  <div class="form-group">
+    <label for="new-body">post body</label>
+    <textarea type="text" class="form-control" id="new-body" required="body">
+    </textarea>
+  </div>
+  <div class="form-group">
+    <input type="hidden" class="form-control" id="new-post-category" data-categoryId="{{categoryId}}">
+    {{!-- get current user info --}}
+    <input type="hidden" class="form-control" id="new-post-user" data-userId="{{currentUser}}">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form> 

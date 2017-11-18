@@ -1,0 +1,17 @@
+<section id="user-account-container">
+	<div class="row">
+		<div class="col-md-3" id="accout-nav">
+			<ul class="nav nav-pills nav-stacked" role="tablist">
+		    <li class="active"><a href="#">porfile</a></li>
+		    <li><a href="/account/inerests">interests</a></li>
+		    <li><a href="/account/posts">posts</a></li>
+		    <li><a href="/account/comments">comments</a></li>
+		    <li><a href="/account/saves">saves</a></li>
+		    <li><a href="/logout">logout</a></li>       
+		  </ul>
+		</div>
+		<div class="col-md-9" id="account-data">
+			{{> account/user-profile-block}}
+		</div>
+	</div>
+</section>
